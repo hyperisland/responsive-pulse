@@ -56,7 +56,7 @@
     "mongoose-unique-validator": "^0.4.1",
     "morgan": "^1.5.1",
     "node-cache": "^1.1.0",
-    "node-sass": "~3.0.0-beta.4",
+    "node-sass": "^4.0.0",
     "nodemailer": "^1.3.2",
     "nodemailer-html-to-text": "^1.0.0",
     "nodemailer-ses-transport": "^1.2.0",
