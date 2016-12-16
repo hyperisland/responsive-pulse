@@ -10,7 +10,7 @@ module.exports = {
     from: 'an email address',
     accessKeyId: 'an access key id',
     secretAccessKey: 'a secret access key',
-    rateLimit: a_number,
+    rateLimit: 1,
     region: 'a region'
   },
   url: {
