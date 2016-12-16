@@ -37,7 +37,7 @@ app.use( session( {
     secret: config.session.secret,
     saveUninitialized: true,
     resave: true,
-    store: new MongoStore( { ip: config.db.ip, port: config.db.port, db: config.db.database } )
+    store: new MongoStore( { ip: config.db.ip, port: config.db.port, db: config.db.database, username: config.db.user, password: config.db.password } )
 } ) );
 app.use( flash() );
 
