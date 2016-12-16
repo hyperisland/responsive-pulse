@@ -17,5 +17,9 @@ module.exports = {
     production: 'a url',
     staging: 'https://hyper-island-responsive-pulse.herokuapp.com/'
   },
-  db_url: process.env.MONGODB_URI
+  db: {
+    ip: process.env.MONGODB_IP,
+    port: process.env.MONGODB_PORT,
+    database: process.env.MONGODB_DATABASE
+  }
 };

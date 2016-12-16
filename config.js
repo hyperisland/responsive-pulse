@@ -33,12 +33,12 @@ if( currentEnv != 'production' && currentEnv != 'staging' ) {
 }
 
 exports.db = {
-    ip: '127.0.0.1',
-    port: 27017,
-    database: exports.appName + '_' + currentEnv
+    ip: local.db.ip || '127.0.0.1',
+    port: local.db.port || 27017,
+    database: local.db.database || exports.appName + '_' + currentEnv
 };
 
-exports.db.url = local.db_url || 'mongodb://' + exports.db.ip + ':' + exports.db.port + '/' + exports.db.database;
+exports.db.url = 'mongodb://' + exports.db.ip + ':' + exports.db.port + '/' + exports.db.database;
 
 exports.auth = local.auth;
 
