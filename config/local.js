@@ -20,6 +20,8 @@ module.exports = {
   db: {
     ip: process.env.MONGODB_IP,
     port: process.env.MONGODB_PORT,
-    database: process.env.MONGODB_DATABASE
+    database: process.env.MONGODB_DATABASE,
+    user: process.env.MONGODB_USER,
+    password: process.env.MONGODB_PASSWORD
   }
 };
