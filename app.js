@@ -115,10 +115,8 @@ mongoose.connect( config.db.url );
 } );
 
 // Start server
-app.listen( config.server.port, config.server.ip, function() {
-    console.log( 'Server started, listening on', config.server.ip + ':' + config.server.port );
-    console.log( 'Server started, listening on', app.get('ip') + ':' + app.get('port') );    
-});
+app.listen( config.server.port );
+console.log( 'Server started, listening on', config.server.ip + ':' + config.server.port );
 
 // HTTP Error Handling
 app.use(function(req, res, next){
