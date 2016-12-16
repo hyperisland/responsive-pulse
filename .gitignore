@@ -9,6 +9,3 @@ node_modules
 design
 public/js
 public/css/main.css
-
-# configuration
-config/local.js
