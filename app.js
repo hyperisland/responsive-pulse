@@ -95,7 +95,11 @@ app.use( function( err, req, res, next ) {
 } );
 
 // Connect to the MongoDB database
-mongoose.connect( config.db.url );
+mongooseOptions = {
+    server: { socketOptions: { keepAlive: 1, connectTimeoutMS: 30000 } },
+    replset: { socketOptions: { keepAlive: 1, connectTimeoutMS: 30000 } }
+};
+mongoose.connect( config.db.url, mongooseOptions);
 
 // Setup routes and controllers
 [
