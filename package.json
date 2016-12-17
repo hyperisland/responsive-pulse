@@ -37,6 +37,7 @@
     "express-flash": "0.0.2",
     "express-session": "^1.10.3",
     "express-session-mongo": "^0.1.0",
+    "gulp": "^3.8.11",
     "gulp-autoprefixer": "^2.1.0",
     "gulp-csso": "^1.0.0",
     "gulp-load-plugins": "^0.8.1",
