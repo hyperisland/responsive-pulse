@@ -1,10 +1,10 @@
 module.exports = {
   auth: {
-    secret: 'a secret',
-    adminPassword: 'an admin password'
+    secret: process.env.AUTH_SECRET,
+    adminPassword: process.env.AUTH_PASSWORD
   },
   session: {
-    secret: 'another secret'
+    secret: process.env.SESSION_SECRET
   },
   email: {
     from: 'an email address',
