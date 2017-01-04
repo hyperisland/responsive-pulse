@@ -7,11 +7,8 @@ module.exports = {
     secret: process.env.SESSION_SECRET
   },
   email: {
-    from: 'an email address',
-    accessKeyId: 'an access key id',
-    secretAccessKey: 'a secret access key',
-    rateLimit: 1,
-    region: 'a region'
+    from: 'online.courses@hyperisland.com',
+    connectionUrl: process.env.SMTP_CONNECTION_URL
   },
   url: {
     production: 'a url',

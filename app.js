@@ -9,7 +9,7 @@ var extend = require( 'util' )._extend,
     mongoose = require( 'mongoose' ),
     nodemailer = require( 'nodemailer' ),
     htmlToText = require( 'nodemailer-html-to-text' ).htmlToText,
-    sesTransport = require( 'nodemailer-ses-transport' ),
+    smtpTransport = require( 'nodemailer-smtp-transport' ),
     MongoStore = require( 'express-session-mongo' ),
     csrf = require( 'csurf' ),
     config = require( './config' ),
@@ -55,7 +55,7 @@ app.use( emailHash() );
 app.use( csrf() );
 
 // Mailer
-var transporter = nodemailer.createTransport( sesTransport( config.email ) );
+var transporter = nodemailer.createTransport( smtpTransport( config.email.connectionUrl ) );
 transporter.use( 'compile', htmlToText( {} ) );
 app.use( function( req, res, next ) {
     res.mailer = {
