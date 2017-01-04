@@ -11,7 +11,7 @@ module.exports = {
     connectionUrl: process.env.SMTP_CONNECTION_URL
   },
   url: {
-    production: 'a url',
+    production: 'https://hyper-island-responsive-pulse.herokuapp.com/',
     staging: 'https://hyper-island-responsive-pulse.herokuapp.com/'
   },
   db: {
