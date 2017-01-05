@@ -65,6 +65,7 @@ app.use( function( req, res, next ) {
     res.mailer = {
         send: function( templateName, locals, callback ) {
             console.log('templatesDir: ' + templatesDir);
+            console.log('templateName: ' + templateName);
             emailTemplates(templatesDir, function( err, template ) {
                 if( err ) {
                     console.log( err );
