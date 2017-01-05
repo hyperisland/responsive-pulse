@@ -54,6 +54,10 @@ app.use( emailHash() );
 
 app.use( csrf() );
 
+process.on('uncaughtException', function (error) {
+   console.log(error.stack);
+});
+
 // Mailer
 var transporter = nodemailer.createTransport( smtpTransport( config.email.connectionUrl ) );
 transporter.use( 'compile', htmlToText( {} ) );
