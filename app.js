@@ -17,7 +17,7 @@ var extend = require( 'util' )._extend,
     emailHash = require( './lib/email_hash' ),
     surveyTemplate = require( './lib/survey_template' ),
     path = require('path'),
-    templatesDir = '/app/views/email',
+    templatesDir = path.resolve(__dirname, '.', 'views/email'),
     emailTemplates = require('email-templates'),
     nodeSass = require('node-sass'),
     juice = require('juice2'),
@@ -60,6 +60,7 @@ transporter.use( 'compile', htmlToText( {} ) );
 app.use( function( req, res, next ) {
     res.mailer = {
         send: function( templateName, locals, callback ) {
+            console.log('templatesDir: ' + templatesDir);
             emailTemplates(templatesDir, function( err, template ) {
                 if( err ) {
                     console.log( err );
